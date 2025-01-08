@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
-class DiaryEntry(val date: String, val content: String) {
+   class DiaryEntry (val date: String, val content: String)
 
     class MainActivity : AppCompatActivity() {
 
@@ -38,7 +38,7 @@ class DiaryEntry(val date: String, val content: String) {
             }
         }
 
-        private fun displayEntries(textView: TextView){
+        private fun displayEntries(textView: TextView) {
             val entriesText = diaryEntries.joinToString(separator = "\n\n") { entry ->
                 "Date: ${entry.date}\nContent: ${entry.content}"
 
@@ -46,4 +46,3 @@ class DiaryEntry(val date: String, val content: String) {
             textView.text = entriesText
         }
     }
-}
